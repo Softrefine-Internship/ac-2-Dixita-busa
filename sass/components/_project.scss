@@ -1,0 +1,353 @@
+.project {
+  background-color: $color-white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 1rem 1rem rgba($color-black, 0.05);
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+
+  &__menu_icon {
+    color: $color-orange;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-orange-hover;
+    }
+  }
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2rem;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      position: relative;
+      &::before {
+        content: "";
+        height: 0.7rem;
+        width: 0.7rem;
+        border-radius: 50%;
+        background-color: $color-orange;
+        border: 1px solid $color-white;
+        position: absolute;
+        top: 1.2rem;
+        z-index: 2;
+        left: 1.5rem;
+      }
+      &-bell {
+        font-size: 2.7rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: $color-orange-hover;
+        }
+      }
+
+      &-pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          display: block;
+          height: 3.6rem;
+          width: 3.6rem;
+          border-radius: 50%;
+          object-fit: contain;
+          margin-right: 01rem;
+          cursor: pointer;
+        }
+
+        div {
+          span {
+            font-size: 1rem;
+            color: $color-gray;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 1.4rem;
+            color: $color-black;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &-icon {
+        height: 1.8rem;
+        width: 1.8rem;
+        background-color: #f6f2ec;
+        display: grid;
+        place-items: center;
+        border: 0.5px solid $color-orange-light;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $color-white;
+        }
+        ion-icon {
+          color: $color-orange;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-img {
+        height: 6rem;
+        width: 6rem;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &-jr {
+        height: 6rem;
+        width: 6rem;
+        background-color: #f6f2ec;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: $color-orange;
+        font-size: 1.6rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      &-add {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dotted $color-orange;
+        font-size: 2.8rem;
+        color: $color-orange;
+        background-color: #f6f2ec;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $color-white;
+        }
+      }
+    }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: $color-white;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba($color-black, 0.1);
+    margin-bottom: 2.5rem;
+    &-1 {
+      span {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba($color-black, 0.6);
+      }
+      p {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  &__view {
+    &:visited,
+    &:link {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $color-orange;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-orange-hover;
+    }
+  }
+
+  &__task-box {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    &-card {
+      padding: 3rem 2rem 2rem 2rem;
+      border-radius: 1rem;
+    }
+    // First card on left
+    &-1 {
+      background-color: #f6f1eb;
+      position: relative;
+      // outline: $outline;
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 2rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        cursor: pointer;
+      }
+    }
+    // Second card on the left
+    &-2 {
+      // outline: $outline;
+      background-image: linear-gradient(rgba($color-off-white, 0.3),rgba($color-off-white, 0.5)),url(../imgs/icons/card-illustration.svg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    &-3 {
+      // outline: $outline;
+      background-image: linear-gradient(to bottom,rgba($color-off-white, 0.5),rgba($color-off-white, 0.7)),url(../imgs/icons/card-illustration-3.svg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    &-4 {
+      // outline: $outline;
+
+      background-image: linear-gradient(to bottom,rgba($color-black, 0.1),rgba($color-off-white, 0)),url(../imgs/icons/card-illustration-2.svg);
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+
+      p {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.card-para {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.task-box-card-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #f96161;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+  }
+}
+
+.task-box-card-3 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #34cbb3;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+  }
+}
+
+.task-box-card-4 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: $color-white;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+    background-color: $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-icon {
+      color: $color-white;
+      font-size: 0.7rem;
+    }
+  }
+}
